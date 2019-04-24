@@ -1,0 +1,22 @@
+<hello name="{{ name }}"></hello>
+<p>
+	Please call the APIs 
+</p>
+<button (click)="onClick()">Retrieve all literatures</button>
+
+<div>
+ 
+<p>Result:</p>
+<b>Literature ID:</b> {{literatureID}} <br/>
+<b>Literature Privacy Policy Flag:</b> {{Literature_Privacy_Policy_Flag}} <br/>
+ <ul>
+    <div *ngFor="let item of Literature_Avaliable_Delivery_Methods">
+    <ul>
+        <li> <b>DELVRY_EXTRNL_FL</b> {{item.DELVRY_EXTRNL_FL}}</li>
+        <li> <b>DELVRY_METH_CD</b> {{item.DELVRY_METH_CD}}</li>
+        <li> <b>PURP_CD</b> {{item.PURP_CD}}</li>
+    </ul>
+    <br/>
+    </div>
+</ul>
+</div>
